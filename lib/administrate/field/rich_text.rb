@@ -4,7 +4,7 @@ module Administrate
   module Field
     class RichText < Administrate::Field::Base
       def to_s
-        data
+        data.to_plain_text
       end
     end
   end
