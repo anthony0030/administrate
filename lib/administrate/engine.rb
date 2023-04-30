@@ -1,3 +1,4 @@
+require "action_text/engine"
 require "jquery-rails"
 require "kaminari"
 require "sassc-rails"
