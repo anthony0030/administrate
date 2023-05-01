@@ -6,6 +6,16 @@ module Administrate
       def to_s
         data&.to_plain_text
       end
+
+      def truncate
+       to_s[0...truncation_length]
+      end
+
+      private
+
+      def truncation_length
+        options.fetch(:truncate, 50)
+      end
     end
   end
 end
