@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  has_rich_text :foo
+
   def self.policy_class=(policy)
     @policy_class = policy
   end
