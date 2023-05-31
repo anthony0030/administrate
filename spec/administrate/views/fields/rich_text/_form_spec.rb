@@ -2,6 +2,12 @@ require "rails_helper"
 require "administrate/field/base"
 require "administrate/field/rich_text"
 
+include ActionText::Engine.helpers
+
+#def main_app
+#  Rails.application
+#end
+
 describe "fields/rich_text/_form", type: :view do
   it "provides the correct name for the field" do
     stub_const("ProductDashbard::ATTRIBUTE_TYPES", {
