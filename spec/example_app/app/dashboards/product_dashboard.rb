@@ -9,7 +9,7 @@ class ProductDashboard < Administrate::BaseDashboard
     :image_url,
     :product_meta_tag,
     :release_year,
-    :banner
+    :banner,
   ]
 
   ATTRIBUTE_TYPES = {

@@ -3,7 +3,7 @@ require "administrate/field/rich_text"
 
 describe "fields/rich_text/_index", type: :view do
   it "renders truncated plain text" do
-    action_text = ActionText::RichText.new(body: 
+    action_text = ActionText::RichText.new(body:
                                            "<div class='trix-context'>
                                             <p>AAAAAAAAAA</p>
                                             <p>BBBBBBBBBB</p>
