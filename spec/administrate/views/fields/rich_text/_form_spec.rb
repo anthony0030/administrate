@@ -6,7 +6,7 @@ include ActionText::Engine.helpers
 
 def main_app
   AdministratePrototype::Application.routes.default_url_options = {
-    host: "www.example.com"
+    host: "www.example.com",
   }
   AdministratePrototype::Application.routes.url_helpers
 end
@@ -15,14 +15,14 @@ describe "fields/rich_text/_form", type: :view do
   it "sets up the rich text field" do
     stub_const(
       "ProductDashbard::ATTRIBUTE_TYPES",
-      banner: Administrate::Field::RichText
+      banner: Administrate::Field::RichText,
     )
     product = build(:product, name: nil)
     banner = instance_double(
-               "Administrate::Field::RichText",
-               attribute: :banner,
-               data: nil,
-             )
+      "Administrate::Field::RichText",
+      attribute: :banner,
+      data: nil,
+    )
 
     render(
       partial: "fields/rich_text/form",

@@ -5,7 +5,7 @@ describe "fields/rich_text/_show", type: :view do
   context "when body" do
     it "renders the HTML" do
       action_text = ActionText::RichText.new(
-        body: "<div class='trix-context'><p>Foo</p></div>"
+        body: "<div class='trix-context'><p>Foo</p></div>",
       )
       field = Administrate::Field::RichText.new(:document, action_text, :show)
 
