@@ -25,10 +25,8 @@ describe "fields/rich_text/_form", type: :view do
       partial: "fields/rich_text/form",
       locals: { field: foo, f: form_builder(product) },
     )
-    puts rendered
 
-    # This will be hidden by Trix. Can we check for invisible?
-    expect(rendered).to have_css(%{input[name="product[foo]"]})
+    expect(rendered).to have_field("product_foo_trix_input_product", type: "hidden")
   end
 
   it "displays the resource name" do
