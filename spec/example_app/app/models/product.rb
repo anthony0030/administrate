@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_rich_text :foo
+  has_rich_text :banner
 
   def self.policy_class=(policy)
     @policy_class = policy
