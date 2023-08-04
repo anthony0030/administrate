@@ -4,9 +4,10 @@ require "administrate/field/rich_text"
 
 include ActionText::Engine.helpers
 
-#def main_app
-#  Rails.application
-#end
+def main_app
+  AdministratePrototype::Application.routes.default_url_options[:host] = "www.example.com"
+  AdministratePrototype::Application.routes.url_helpers
+end
 
 describe "fields/rich_text/_form", type: :view do
   it "provides the correct name for the field" do
@@ -24,7 +25,9 @@ describe "fields/rich_text/_form", type: :view do
       partial: "fields/rich_text/form",
       locals: { field: foo, f: form_builder(product) },
     )
+    puts rendered
 
+    # This will be hidden by Trix. Can we check for invisible?
     expect(rendered).to have_css(%{input[name="product[foo]"]})
   end
 
