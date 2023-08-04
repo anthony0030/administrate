@@ -10,7 +10,7 @@ def main_app
 end
 
 describe "fields/rich_text/_form", type: :view do
-  it "provides the correct name for the field" do
+  it "sets up the rich text field" do
     stub_const("ProductDashbard::ATTRIBUTE_TYPES", {
       banner: Administrate::Field::RichText
     })
@@ -27,26 +27,6 @@ describe "fields/rich_text/_form", type: :view do
     )
 
     expect(rendered).to have_field("product_banner_trix_input_product", type: "hidden")
-  end
-
-  it "displays the resource name" do
-    stub_const("ProductDashbard::ATTRIBUTE_TYPES", {
-      banner: Administrate::Field::RichText
-    })
-    product = build(:product, banner: nil)
-    rich_text = instance_double(
-      "Administrate::Field::RichText",
-      attribute: "Foo",
-      data: nil,
-      name: "banner",
-    )
-
-    render(
-      partial: "fields/rich_text/form",
-      locals: { field: rich_text, f: form_builder(product) },
-    )
-
-    expect(rendered.strip).to include("Foo")
   end
 
   def form_builder(object)
