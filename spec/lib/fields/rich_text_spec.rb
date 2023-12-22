@@ -16,7 +16,9 @@ describe Administrate::Field::RichText do
   describe "#to_partial_path" do
     it "returns a partial based on the page being rendered" do
       page = :show
-      action_text = ActionText::RichText.new(body: "<div class='trix'><p>Foo</p></div>")
+      action_text = ActionText::RichText.new(
+        body: "<div class='trix'><p>Foo</p></div>"
+      )
       field = Administrate::Field::RichText.new(:document, action_text, page)
 
       path = field.to_partial_path
@@ -27,7 +29,9 @@ describe Administrate::Field::RichText do
 
   describe "#to_s" do
     it "displays plain body text" do
-      action_text = ::ActionText::RichText.new(body: "<div class='trix'><p>Foo</p></div>")
+      action_text = ::ActionText::RichText.new(
+        body: "<div class='trix'><p>Foo</p></div>"
+      )
       rich_text = Administrate::Field::RichText.new(:document, action_text, :show)
 
       expect(rich_text.to_s).to eq("Foo")
