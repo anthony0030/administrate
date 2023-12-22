@@ -8,7 +8,7 @@ module Administrate
       end
 
       def truncate
-        to_s[0...truncation_length]
+        to_s.truncate(truncation_length)
       end
 
       private
