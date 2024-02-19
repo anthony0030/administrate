@@ -7,7 +7,12 @@ In future, this should mean that changes to the way you, or Administrate
 manages assets should not have an effect on you. However, this is quite a big
 change and so you might find some problems.
 
+As with most upgrades, if you're upgrading between versions with changes to the
+templates, and if you've customised them, you may need to apply recent changes.
+You can see those which changed in the [CHANGELOG][].
+
 [2397]: https://github.com/thoughtbot/administrate/pull/2397
+[CHANGELOG]: https://github.com/thoughtbot/administrate/blob/main/CHANGELOG.md
 
 ## Reported Issues
 
