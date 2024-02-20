@@ -11,6 +11,12 @@ As with most upgrades, if you're upgrading between versions with changes to the
 templates, and if you've customised them, you may need to apply recent changes.
 You can see those which changed in the [CHANGELOG][].
 
+This applies to both modified files in `app/views/admin` and `app/views/fields`
+if you have your own Field classes defined. A good way is to use the same command
+to generate the view as for the earlier version:
+`rails generate administrate:views:ACTION MyModel`
+noting the changes and re-applying the modifications
+
 [2397]: https://github.com/thoughtbot/administrate/pull/2397
 [CHANGELOG]: https://github.com/thoughtbot/administrate/blob/main/CHANGELOG.md
 
