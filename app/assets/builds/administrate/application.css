@@ -863,6 +863,14 @@ trix-editor .attachment__metadata .attachment__size {
   padding-right: 0.6em;
 }
 
+.trix-content ul {
+  list-style-type: disc;
+}
+
+.trix-content ol {
+  list-style-type: decimal;
+}
+
 .trix-content li {
   margin-left: 1em;
 }
