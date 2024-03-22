@@ -53,4 +53,6 @@ Rails.application.configure do
   if Rails.gem_version >= Gem::Version.new("7.0")
     config.active_support.cache_format_version = 7.0
   end
+
+  config.active_storage.service = :test
 end
