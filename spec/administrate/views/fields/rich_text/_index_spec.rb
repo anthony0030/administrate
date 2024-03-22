@@ -12,10 +12,10 @@ describe "fields/rich_text/_index", type: :view do
 
     render(
       partial: "fields/rich_text/index",
-      locals: { field: field, namespace: :admin },
+      locals: {field: field, namespace: :admin}
     )
 
-    expect(rendered).to_not have_css(%{div[class='trix-context']})
+    expect(rendered).to_not have_css(%(div[class='trix-context']))
     expect(rendered).to have_text("AA")
     expect(rendered).to_not have_text("B")
   end

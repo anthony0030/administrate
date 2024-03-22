@@ -5,18 +5,18 @@ describe "fields/rich_text/_show", type: :view do
   context "when body" do
     it "renders the HTML" do
       action_text = ActionText::RichText.new(
-        body: "<div class='trix-context'><p>Foo</p></div>",
+        body: "<div class='trix-context'><p>Foo</p></div>"
       )
       field = Administrate::Field::RichText.new(:document, action_text, :show)
 
       render(
         partial: "fields/rich_text/show",
-        locals: { field: field, namespace: :admin },
+        locals: {field: field, namespace: :admin}
       )
 
       expect(rendered).to have_css(
-        %{div[class='trix-context']},
-        text: "Foo",
+        %(div[class='trix-context']),
+        text: "Foo"
       )
     end
   end
@@ -28,10 +28,10 @@ describe "fields/rich_text/_show", type: :view do
 
       render(
         partial: "fields/rich_text/show",
-        locals: { field: field, namespace: :admin },
+        locals: {field: field, namespace: :admin}
       )
 
-      expect(rendered).to_not have_css(%{div[class='trix-context']})
+      expect(rendered).to_not have_css(%(div[class='trix-context']))
     end
   end
 end
