@@ -41,9 +41,13 @@ module Administrate
         else
           self.class.associated_class_name(
             resource.class,
-            attribute,
+            attribute
           )
         end
+      end
+
+      def html_controller
+        "select"
       end
 
       private

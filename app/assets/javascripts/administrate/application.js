@@ -1,6 +1,7 @@
-//= require jquery
-//= require jquery_ujs
-//= require selectize
-//= require trix_custom.js
-//= require actiontext
-//= require_tree .
+/* require trix_custom.js */
+import "./add_jquery";
+
+import "@hotwired/turbo-rails";
+import "selectize/dist/js/selectize.min.js";
+
+import "./controllers";

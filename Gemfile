@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 ruby "3.2.2" unless ENV["CI"]
 
 gemspec
@@ -11,8 +11,13 @@ gem "kaminari-i18n"
 gem "pg"
 gem "pundit"
 gem "redcarpet"
-gem "sentry-raven"
+gem "sentry-rails"
+gem "sentry-ruby"
 gem "unicorn"
+
+gem "cssbundling-rails", "~> 1.2"
+gem "jsbundling-rails", "~> 1.1"
+gem "sprockets-rails", "~> 3.4"
 
 group :development, :test do
   gem "appraisal"
@@ -22,6 +27,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "i18n-tasks", "1.0.13"
   gem "pry"
+  gem "standard"
   gem "yard"
 end
 

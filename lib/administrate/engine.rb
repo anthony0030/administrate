@@ -1,9 +1,5 @@
 require "action_text/engine"
-require "jquery-rails"
 require "kaminari"
-require "sassc-rails"
-require "selectize-rails"
-require "sprockets/railtie"
 
 require "administrate/namespace/resource"
 require "administrate/not_authorized_error"
@@ -14,7 +10,6 @@ require "administrate/order"
 require "administrate/resource_resolver"
 require "administrate/search"
 require "administrate/namespace"
-require "administrate/namespace/resource"
 
 module Administrate
   class Engine < ::Rails::Engine
@@ -26,7 +21,7 @@ module Administrate
     initializer "administrate.assets.precompile" do |app|
       app.config.assets.precompile += [
         "administrate/application.js",
-        "administrate/application.css",
+        "administrate/application.css"
       ]
     end
 
