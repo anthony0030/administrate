@@ -54,5 +54,6 @@ Rails.application.configure do
     config.active_support.cache_format_version = 7.0
   end
 
+  # Store uploaded files on the local file system in a temporary directory.
   config.active_storage.service = :test
 end
