@@ -1,4 +1,3 @@
-require "action_text/engine"
 require "kaminari"
 
 require "administrate/namespace/resource"
@@ -23,6 +22,12 @@ module Administrate
         "administrate/application.js",
         "administrate/application.css"
       ]
+    end
+
+    initializer "administrate.action_text" do
+      ActiveSupport.on_load :action_text_rich_text do
+        require "administrate/field/rich_text"
+      end
     end
 
     def self.add_javascript(script)
